@@ -1,0 +1,17 @@
+trigger: none
+
+pool:
+  vmImage: windows-latest
+
+parameters:
+  - name: Image
+    displayName: PoolImage
+    default: macOS-latest
+    type: string
+    values:
+      - windows-latest
+      - ubuntu-latest
+
+steps:
+  - script: echo Hello, world!
+    displayName: 'Run a one-line script'
